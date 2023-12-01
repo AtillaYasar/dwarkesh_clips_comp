@@ -88,13 +88,8 @@ def channelvids(vid_url):
     print(channel_id)
     playlist = youtubesearchpython.Playlist(youtubesearchpython.playlist_from_channel_id(channel_id))
 
-    print(f'Videos Retrieved: {len(playlist.videos)}')
-
     while playlist.hasMoreVideos:
-        break
-        print('Getting more videos...')
         playlist.getNextVideos()
-        print(f'Videos Retrieved: {len(playlist.videos)}')
 
     return playlist.videos
 
