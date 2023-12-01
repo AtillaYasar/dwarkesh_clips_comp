@@ -10,5 +10,5 @@ screenshot basically sums up current functionality. it just iterates over the li
 ![Screenshot_9](https://github.com/AtillaYasar/dwarkesh_clips_comp/assets/112716905/1fc04976-17cf-425b-8ae6-44298d038ac7)
 
 # embstuff.py
-you can use this to create, update, and search over, a small text-embeddings database, using openai's embeddings endpoint. (also has an example of a function that creates an embedding for a single youtube video, and adds metadata)
+you can use this to create, update, and search over, a small text-embeddings database, using openai's embeddings endpoint. (also has an example of a function that creates an embedding for a single youtube video, and adds metadata).  
 *small*, because it's (very clearly) not optimized for efficiency. but should be fine for the purpose of this competition.
