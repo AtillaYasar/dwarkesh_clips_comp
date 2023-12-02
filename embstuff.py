@@ -91,6 +91,25 @@ class EmbeddingsHandler:
         )
         return triplets  # to get metadata youd need to use self.stom[string]
 
+def vidinfo(url):
+    video = youtubesearchpython.Video.get(url, mode = youtubesearchpython.ResultMode.json, get_upload_date=True)
+
+    to_return = {
+        'title': video['title'],
+        'seconds': video['duration']['secondsText'],
+        'views': video['viewCount']['text'],
+        'description': video['description'],
+        'upload_date': video['uploadDate'],
+        'category': video['category'],
+        'keywords': video['keywords'],
+        'link': video['link'],
+        'channelname': video['channel']['name'],
+        'channellink': video['channel']['link'],
+        'channelid': video['channel']['id'],
+    }
+
+    return to_return
+
 def embed_video(url, extra_tags=[]):
     eh = EmbeddingsHandler()
     v = vidinfo(url)
